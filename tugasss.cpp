@@ -71,3 +71,4 @@ public:
 int main()
 {
       int choice = 0;
+        int value;
