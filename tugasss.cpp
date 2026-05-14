@@ -23,3 +23,24 @@ public:
     {
         top = NULL;
     }
+
+       int push(int value)
+    {
+        Node *newNode = new Node();
+        newNode->data = value;
+        newNode->next = top;
+        top = newNode;
+        cout << "Push value: " << value << endl;
+        return value;
+    }
+    void pop()
+    {
+        if (isEmpty())
+        {
+            cout << "Stack is empty." << endl;
+        }
+        
+        Node *temp = top;
+        top = top->next;
+        cout << "Popped value: " << temp->data << endl;
+    }
